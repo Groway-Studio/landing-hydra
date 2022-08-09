@@ -1,0 +1,19 @@
+@import "../../styles/styles.scss";
+
+.footer {
+  background: #1d212980;
+  padding: 40px 100px;
+  display: grid;
+  backdrop-filter: blur(11px);
+  gap: 2rem;
+
+  &__social_icons {
+    display: flex;
+    gap: 2.5rem;
+    svg {
+      color: $white;
+
+      font-size: 30px;
+    }
+  }
+}
