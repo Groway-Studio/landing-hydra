@@ -14,11 +14,11 @@ export const features = [
     title: "Comunicación",
     info: (
       <p>
-        Esto no es poca cosa: Los clientes valoran la posibilidad de comunicarse
-        con las marcas si lo necesitan. En la actualidad, el
-        <span>66%</span> de los consumidores confía más en hacer una compra
-        cuando una empresa utiliza activamente las{" "}
-        <span>aplicaciones de mensajería.</span>
+        Esto no es poca cosa: <br />
+        Los clientes valoran la posibilidad de comunicarse con las marcas si lo
+        necesitan. En la actualidad, el <span>66%</span> de los consumidores
+        confía más en hacer una compra cuando una empresa utiliza activamente
+        las <span>aplicaciones de mensajería.</span>
       </p>
     ),
   },

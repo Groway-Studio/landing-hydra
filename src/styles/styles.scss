@@ -177,4 +177,8 @@ $desktop_xl: 1920px;
   position: absolute;
   top: 97%;
   width: 5px;
+
+  @include phone {
+    width: 3px;
+  }
 }

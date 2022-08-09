@@ -7,13 +7,35 @@
   backdrop-filter: blur(11px);
   gap: 2rem;
 
+  img {
+    max-width: 180px;
+    width: 20%;
+
+    @include phone {
+      width: 50%;
+      max-width: 200px;
+    }
+  }
+
+  @include phone {
+    padding-left: 20px;
+  }
+
   &__social_icons {
     display: flex;
     gap: 2.5rem;
+
+    @include phone {
+      gap: 2rem;
+    }
+
     svg {
       color: $white;
-
       font-size: 30px;
+
+      @include phone {
+        font-size: 25px;
+      }
     }
   }
 }

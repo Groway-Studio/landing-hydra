@@ -4,10 +4,13 @@
   display: grid;
   gap: 2.8rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   position: relative;
   padding: 6rem 0;
+
+  @include phone {
+    gap: 3rem;
+  }
 
   &::after {
     @include green_line_separator;
@@ -20,21 +23,34 @@
   }
 
   &__ellipse1 {
-    background: linear-gradient(216.29deg, #13835e 7.56%, #1979aa00 85.19%);
+    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     height: 706px;
     left: -8%;
     top: 10%;
     width: 706px;
     z-index: -100;
+
+    @include phone {
+      width: 500px;
+      height: 500px;
+      left: 25%;
+      top: 15%;
+    }
   }
 
   &__ellipse2 {
-    background: linear-gradient(216.29deg, #13835e 7.56%, #1979aa00 85.19%);
+    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     height: 173.95px;
     right: 3%;
     top: 10%;
     transform: rotate(-135deg);
     width: 173.95px;
+
+    @include phone {
+      top: 77%;
+      right: 0;
+      left: -3%;
+    }
   }
 
   &__card {
@@ -46,24 +62,52 @@
     display: flex;
     height: 350px;
     justify-content: space-between;
-    max-width: 1024px;
+    max-width: 75%;
     padding: 2rem 3rem 2rem 2rem;
     width: 100%;
 
+    @include phone {
+      align-items: flex-start;
+      backdrop-filter: blur(30px);
+      flex-direction: column;
+      height: 100%;
+      max-width: 75%;
+      padding: 2rem;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
     h2 {
-      width: 70%;
       color: $green3;
       font-size: 2rem;
       margin: 0;
+      width: 70%;
+
+      @include phone {
+        font-size: 1.3rem;
+        padding-right: 1rem;
+        width: 100%;
+      }
     }
 
     p {
       font-size: 1.2rem;
       width: 100%;
+
+      @include phone {
+        font-size: 0.85rem;
+        padding-right: 1rem;
+      }
     }
 
     div {
-      width: 560px;
+      width: 60%;
+
+      @include phone {
+        width: 100%;
+      }
     }
 
     &:last-child {
@@ -71,25 +115,55 @@
       margin: 0 0 0 auto;
       padding: 2rem 0 2rem 3rem;
 
+      @include phone {
+        align-items: flex-end;
+        flex-direction: column;
+        padding-left: 1rem;
+        text-align: right;
+      }
+
       div {
         width: 650px;
+
+        @include phone {
+          width: 100%;
+        }
       }
 
       img {
         border-bottom-right-radius: 20px;
+
+        @include phone {
+          border-bottom-right-radius: 0;
+        }
       }
     }
 
     img {
       margin-bottom: 120px;
+
+      @include phone {
+        margin: -50% 0 0 0;
+
+        width: 70%;
+      }
     }
   }
 
   & :nth-child(3) {
     text-align: right;
 
+    @include phone {
+      padding-right: 1rem;
+      text-align: left;
+    }
+
     h2 {
       margin: 0 0 0 auto;
+
+      @include phone {
+        margin: 0 0 auto;
+      }
     }
   }
 }

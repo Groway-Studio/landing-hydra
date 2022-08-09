@@ -1,4 +1,4 @@
-import hydra from "../../assets/hydra_logo.png";
+import hydra from "../../assets/hydra_logo.svg";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {

@@ -1,7 +1,7 @@
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 
-import hydra_business from "../../assets/hydra_business.png";
+import hydra_business from "../../assets/hydra_business.svg";
 import styles from "./footer.module.scss";
 
 const Footer = () => {

@@ -2,7 +2,8 @@
 
 .info {
   align-items: flex-start;
-  display: flex;
+  display: grid;
+  grid-template-columns: calc(40% - 3rem) calc(60% - 3rem);
   gap: 6rem;
   height: 50vh;
   margin: 0 auto;
@@ -10,14 +11,29 @@
   position: relative;
   width: 100%;
 
+  @include phone {
+    grid-template-columns: 45% 55%;
+    height: 100%;
+    gap: 0.5rem;
+    padding: 6rem 0;
+  }
+
   &::after {
     @include green_line_separator;
     top: 240px;
     height: 220px;
+
+    @include phone {
+      top: 80%;
+    }
   }
 
   &__description {
     font-size: 1.3rem;
+
+    @include phone {
+      font-size: 0.85rem;
+    }
   }
 
   &__highlight {
@@ -26,10 +42,19 @@
     border-width: 1px;
     padding: 2rem 1.3rem;
 
+    @include phone {
+      padding: 1rem;
+    }
+
     p {
       font-size: 1.4rem;
       font-weight: 600;
       margin: 0;
+
+      @include phone {
+        font-size: 0.9rem;
+        text-align: right;
+      }
     }
   }
 }

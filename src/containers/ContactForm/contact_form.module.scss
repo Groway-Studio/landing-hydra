@@ -6,10 +6,18 @@
   padding: 6rem 0;
   height: 100vh;
 
+  @include phone {
+    margin-bottom: 10rem;
+  }
+
   &::after {
     @include green_line_separator;
     top: 580px;
     height: 220px;
+
+    @include phone {
+      top: 90%;
+    }
   }
 
   &__ellipse1,
@@ -20,7 +28,7 @@
   }
 
   &__ellipse1 {
-    background: linear-gradient(216.29deg, #13835e 7.56%, #1979aa00 85.19%);
+    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     bottom: -15%;
     height: 706px;
     left: -10%;
@@ -29,11 +37,14 @@
     @include phone {
       height: 246px;
       width: 246px;
+
+      bottom: 10%;
+      left: -20%;
     }
   }
 
   &__ellipse2 {
-    background: linear-gradient(216.29deg, #13835e 7.56%, #1979aa00 85.19%);
+    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     height: 173.95px;
     right: 10%;
     top: 0;
@@ -46,12 +57,17 @@
   }
 
   &__title {
-    text-align: center;
-    text-transform: uppercase;
+    font-size: 2.25rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 2.25rem;
     line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include phone {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__form {
@@ -59,22 +75,26 @@
     margin: auto;
 
     @include phone {
-      width: 80%;
+      width: 100%;
     }
 
     input,
     textarea {
+      backdrop-filter: blur(2px);
       background-color: #ffffff23;
       border: 3px solid $white;
-      backdrop-filter: blur(2px);
       color: $white;
       font-size: 1.2rem;
+      outline: none;
       padding: 1.4rem 1rem;
       z-index: 100;
-      outline: none;
 
       &::placeholder {
         color: $white;
+      }
+
+      @include phone {
+        backdrop-filter: unset;
       }
     }
 
@@ -116,9 +136,12 @@
 
     textarea {
       border-radius: 0 0 10px 10px;
-
       resize: none;
       width: 100%;
+
+      @include phone {
+        height: 200px;
+      }
     }
 
     &_button {
@@ -140,6 +163,10 @@
         font-size: 1.1rem;
         margin: 0;
         padding: 0.7rem 4rem;
+
+        @include phone {
+          padding: 0.7rem 2rem;
+        }
       }
     }
   }
