@@ -10,9 +10,14 @@
 
   @include phone {
     padding: 0;
-    grid-template-columns: calc(100% - 180px) 180px;
+    grid-template-columns: calc(100% - 150px) 150px;
     height: 100%;
     align-items: flex-start;
+  }
+
+  @include tablet {
+    grid-template-columns: 50% 50%;
+    padding: 0;
   }
 
   &__ellipse1,
@@ -27,7 +32,7 @@
     height: 173.95px;
     background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     transform: rotate(-135deg);
-    bottom: 28%;
+    bottom: 26%;
     left: 10%;
 
     @include phone {
@@ -36,6 +41,11 @@
       transform: rotate(-148.47deg);
       bottom: -60px;
       left: -50px;
+    }
+
+    @include tablet {
+      bottom: 0;
+      left: -10%;
     }
   }
 
@@ -53,10 +63,16 @@
     background-repeat: no-repeat;
 
     @include phone {
-      height: 270px;
+      height: 230px;
       right: -35px;
-      width: 270px;
+      width: 230px;
       top: 10px;
+    }
+
+    @include tablet {
+      height: 400px;
+      top: 10%;
+      width: 400px;
     }
 
     img {
@@ -64,24 +80,34 @@
       bottom: -25px;
 
       @include phone {
-        width: 240px;
-        height: 240px;
+        width: 190px;
+        height: 190px;
         top: 50px;
+      }
+
+      @include tablet {
+        height: 85%;
+        width: 85%;
       }
     }
   }
 
   &__content {
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: 45px;
+    margin: 45px auto auto;
     max-width: 615px;
-    z-index: 100;
-    width: 100%;
     position: relative;
+    width: 100%;
+    z-index: 100;
+    padding-left: 7rem;
 
     @include phone {
       margin-top: 65px;
+      padding: 0;
+    }
+
+    @include tablet {
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -92,11 +118,17 @@
     font-weight: 400;
     line-height: 77px;
     margin: 0;
+    width: 120%;
 
     @include phone {
       font-size: 1.8rem;
       font-weight: 900;
       line-height: 34px;
+    }
+
+    @include tablet {
+      font-size: 2.5rem;
+      line-height: 50px;
     }
 
     span {
@@ -118,6 +150,10 @@
       width: 150%;
     }
 
+    @include tablet {
+      width: 100%;
+    }
+
     span {
       font-style: italic;
       font-weight: 400;
@@ -126,12 +162,18 @@
 
   &__arrow {
     position: absolute;
-    left: 14%;
-    top: 95%;
+    left: 30%;
+    top: 90%;
 
     @include phone {
       width: 10px;
       left: 30%;
+    }
+
+    @include tablet {
+      width: 30px;
+      left: 30%;
+      top: 90%;
     }
   }
 
@@ -161,6 +203,12 @@
       object-fit: contain;
       height: auto;
       margin-top: 30px;
+    }
+
+    @include tablet {
+      width: 315px;
+      object-fit: contain;
+      margin: 0 30px 0 auto;
     }
   }
 }

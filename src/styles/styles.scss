@@ -52,9 +52,8 @@ $desktop_xl: 1920px;
 }
 
 @mixin base {
-  width: $container_width;
-
   margin: auto;
+  width: $container_width;
 
   @include tablet {
     width: 90%;
@@ -78,73 +77,6 @@ $desktop_xl: 1920px;
     height: auto;
     margin: auto;
   }
-}
-
-@mixin button {
-  &-button {
-    @include phone {
-      display: none;
-    }
-    span {
-      color: #fff;
-    }
-  }
-}
-
-@mixin buttonMobile {
-  &-button {
-    &-mobile {
-      display: none;
-      span {
-        color: #fff;
-      }
-      @include phone {
-        display: flex;
-        margin: 2%;
-        flex-direction: column;
-        align-items: center;
-        a {
-          width: 100%;
-        }
-        button {
-          width: 100%;
-        }
-      }
-    }
-    display: flex;
-    justify-content: flex-end;
-    a {
-      span {
-        color: #fff;
-      }
-    }
-    @include phone {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin: 2%;
-
-      a {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@mixin form {
-  &-form {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-
-@mixin slanted_text {
-  display: inline-flex;
-  transform: skewX(-8deg);
 }
 
 @mixin flex_center {

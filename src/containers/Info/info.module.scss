@@ -18,6 +18,13 @@
     padding: 6rem 0;
   }
 
+  @include tablet {
+    gap: 1rem;
+    grid-template-columns: 45% 55%;
+    height: 100%;
+    padding: 6rem 0 3rem;
+  }
+
   &::after {
     @include green_line_separator;
     top: 240px;
@@ -25,6 +32,10 @@
 
     @include phone {
       top: 80%;
+    }
+
+    @include tablet {
+      top: 100%;
     }
   }
 

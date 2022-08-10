@@ -14,9 +14,18 @@
     padding-top: 10rem;
   }
 
+  @include tablet {
+    margin: 16rem 0 5rem;
+    // padding-bottom: 10rem;
+  }
+
   &::after {
     @include green_line_separator;
     top: 98%;
+
+    @include tablet {
+      top: 105%;
+    }
   }
 
   &__content {
@@ -25,9 +34,14 @@
     grid-template-columns: repeat(3, 1fr);
 
     @include phone {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       gap: 0;
       margin: 0 auto;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -46,6 +60,10 @@
       padding-bottom: 5rem;
     }
 
+    @include tablet {
+      flex: 1;
+    }
+
     &:nth-child(1) {
       background: linear-gradient(#455a64 0%, #455a6400 80.83%);
 
@@ -59,6 +77,7 @@
 
       @include phone {
         background: linear-gradient(#13835e 2.64%, #21c96415 100%);
+        margin-top: -35px;
       }
     }
 
@@ -67,6 +86,7 @@
 
       @include phone {
         background: linear-gradient(#455a64 0%, #455a6315 100%);
+        margin-top: -50px;
       }
     }
 

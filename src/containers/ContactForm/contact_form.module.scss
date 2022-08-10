@@ -10,6 +10,11 @@
     margin-bottom: 10rem;
   }
 
+  @include tablet {
+    height: 100%;
+    margin-bottom: 10rem;
+  }
+
   &::after {
     @include green_line_separator;
     top: 580px;
@@ -22,8 +27,8 @@
 
   &__ellipse1,
   &__ellipse2 {
-    position: absolute;
     border-radius: 50%;
+    position: absolute;
     z-index: -100;
   }
 
@@ -35,11 +40,17 @@
     width: 706px;
 
     @include phone {
-      height: 246px;
-      width: 246px;
-
       bottom: 10%;
+      height: 246px;
       left: -20%;
+      width: 246px;
+    }
+
+    @include tablet {
+      height: 400px;
+      bottom: -10%;
+      left: -20%;
+      width: 400px;
     }
   }
 
@@ -53,6 +64,13 @@
 
     @include phone {
       display: none;
+    }
+
+    @include tablet {
+      height: 130px;
+      width: 130px;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -68,14 +86,22 @@
       font-size: 2rem;
       margin-bottom: 3rem;
     }
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 
   &__form {
-    width: 50%;
     margin: auto;
+    width: 50%;
 
     @include phone {
       width: 100%;
+    }
+
+    @include tablet {
+      width: 90%;
     }
 
     input,
@@ -88,6 +114,14 @@
       outline: none;
       padding: 1.4rem 1rem;
       z-index: 100;
+
+      @include phone {
+        padding: 1rem;
+      }
+
+      @include tablet {
+        padding: 1rem;
+      }
 
       &::placeholder {
         color: $white;

@@ -12,6 +12,12 @@
     gap: 3rem;
   }
 
+  @include tablet {
+    justify-content: center;
+    height: 100%;
+    padding: 0 0 6rem 0;
+  }
+
   &::after {
     @include green_line_separator;
   }
@@ -31,10 +37,17 @@
     z-index: -100;
 
     @include phone {
-      width: 500px;
       height: 500px;
       left: 25%;
       top: 15%;
+      width: 500px;
+    }
+
+    @include tablet {
+      height: 400px;
+      width: 400px;
+      left: -30%;
+      top: 75%;
     }
   }
 
@@ -47,9 +60,14 @@
     width: 173.95px;
 
     @include phone {
-      top: 77%;
-      right: 0;
       left: -3%;
+      right: 0;
+      top: 77%;
+    }
+
+    @include tablet {
+      height: 130px;
+      width: 130px;
     }
   }
 
@@ -77,6 +95,10 @@
 
     @include tablet {
       width: 100%;
+      margin: 0 auto;
+      flex-direction: column;
+      height: 100%;
+      padding: 2rem;
     }
 
     h2 {
@@ -90,6 +112,12 @@
         padding-right: 1rem;
         width: 100%;
       }
+
+      @include tablet {
+        width: 100%;
+        text-align: center;
+        font-size: 1.7rem;
+      }
     }
 
     p {
@@ -100,12 +128,21 @@
         font-size: 0.85rem;
         padding-right: 1rem;
       }
+
+      @include tablet {
+        text-align: left;
+        font-size: 1.1rem;
+      }
     }
 
     div {
       width: 60%;
 
       @include phone {
+        width: 100%;
+      }
+
+      @include tablet {
         width: 100%;
       }
     }
@@ -122,10 +159,20 @@
         text-align: right;
       }
 
+      @include tablet {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
       div {
         width: 650px;
 
         @include phone {
+          width: 100%;
+        }
+
+        @include tablet {
           width: 100%;
         }
       }
@@ -136,6 +183,10 @@
         @include phone {
           border-bottom-right-radius: 0;
         }
+
+        @include tablet {
+          border-bottom-right-radius: 0;
+        }
       }
     }
 
@@ -144,8 +195,12 @@
 
       @include phone {
         margin: -50% 0 0 0;
-
         width: 70%;
+      }
+
+      @include tablet {
+        margin: 0;
+        width: 40%;
       }
     }
   }
