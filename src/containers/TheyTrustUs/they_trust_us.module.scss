@@ -3,12 +3,13 @@
 .they_trust_us {
   @include flex_center;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
+  max-height: 660px;
   position: relative;
 
   &::after {
     @include green_line_separator;
-    top: 580px;
+    top: 72%;
 
     @include tablet {
       top: 70%;
@@ -17,14 +18,14 @@
     @include phone {
       top: 70%;
     }
+
+    @include desktop_hd {
+      top: 72%;
+    }
   }
 
   @include phone {
     margin: 3rem 0;
-  }
-
-  @include tablet {
-    padding: 3rem 0;
   }
 
   &__title {
@@ -56,8 +57,10 @@
       gap: 1rem;
       overflow-x: scroll;
       justify-content: flex-start;
+    }
 
-      // grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      padding: 2rem 0;
     }
 
     &_item {

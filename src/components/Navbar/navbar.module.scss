@@ -15,7 +15,7 @@
 
   &__logo {
     @include phone {
-      height: 50px;
+      height: 2rem;
     }
 
     @include tablet {
@@ -29,46 +29,68 @@
     display: flex;
     gap: 4rem;
     margin: 0;
-    height: 35px;
+    padding-top: 0.5rem;
 
     @include tablet {
       gap: 0.2rem;
     }
 
+    @include desktop_hd {
+      gap: 1rem;
+    }
+
     @include phone {
       animation: menuAnimation 0.1s linear 0s 1 normal forwards;
-      background: $primaryColor;
+      background: $primaryColorWithTransparency;
+      border: 1px solid;
+      border-top-color: transparent;
       display: flex;
       flex-direction: column;
       gap: 0;
-      height: 130px;
+      height: auto;
       position: absolute;
       text-align: center;
-      top: 110%;
+      top: 120%;
       transition: all 0.2s cubic-bezier(0.26, 0.59, 0.83, 0.67);
       width: 100%;
       z-index: 600;
     }
 
     &_item {
-      @include border_radius;
-      padding: 6px 15px;
       height: auto;
 
-      &:last-child {
+      @include phone {
+        // padding: 6px 0;
+      }
+
+      &:last-child a {
+        @include border_radius;
         border: 1px solid $white;
 
         @include phone {
           border: none;
+          border-radius: 0;
         }
       }
       a {
-        text-decoration: none;
         color: $white;
+        padding: 6px 15px;
+        text-decoration: none;
+        transition: background 0.3s ease;
 
         &:visited,
         &:active {
           color: $white;
+        }
+
+        @include phone {
+          display: block;
+          padding: 10px 0;
+          width: 100%;
+        }
+
+        &:hover {
+          background: $secondaryColor;
         }
       }
     }
@@ -82,7 +104,7 @@
 .mobile_menu {
   display: none;
   position: relative;
-  margin-top: 0.625rem;
+  margin-top: 0.5rem;
 
   @include phone {
     display: block;
@@ -93,17 +115,17 @@
       display: block;
       border-radius: 10px;
       content: "";
-      width: 30px;
-      height: 3px;
+      width: 25px;
+      height: 2px;
       background: $white;
     }
 
     &:after {
-      margin-top: 7px;
+      margin-top: 5px;
     }
 
     &:before {
-      margin-top: 10px;
+      margin-top: 7px;
     }
   }
 }

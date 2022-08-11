@@ -4,7 +4,7 @@ const Info = () => {
   return (
     <section className={styles.info}>
       <p className={styles.info__description}>
-        Si algo ha demostrado el distanciamiento social inpuesto por la pandemia
+        Si algo ha demostrado el distanciamiento social forzado por la pandemia
         es que los seres humanos <span>necesitan</span> y valoran la interacción
         <span>social.</span>
       </p>

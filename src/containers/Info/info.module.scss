@@ -5,11 +5,11 @@
   display: grid;
   grid-template-columns: calc(40% - 3rem) calc(60% - 3rem);
   gap: 6rem;
-  height: 50vh;
   margin: 0 auto;
-  max-width: 1024px;
   position: relative;
+  height: 100%;
   width: 100%;
+  padding: 12rem 0 10rem 0;
 
   @include phone {
     grid-template-columns: 45% 55%;
@@ -25,9 +25,13 @@
     padding: 6rem 0 3rem;
   }
 
+  @include desktop_hd {
+    max-height: 500px;
+  }
+
   &::after {
     @include green_line_separator;
-    top: 240px;
+    top: 80%;
     height: 220px;
 
     @include phone {
@@ -48,21 +52,28 @@
   }
 
   &__highlight {
-    border-image: linear-gradient(to right, $white 0, transparent 50%) 1;
-    border-style: solid;
-    border-width: 1px;
-    padding: 2rem 1.3rem;
+    background-image: linear-gradient(#ffffff00, #ffffff00),
+      linear-gradient(45deg, $white 0%, #ffffff00 70%);
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    padding: 1px;
+    border-radius: 30px;
 
     @include phone {
-      padding: 1rem;
+      background-image: linear-gradient(#ffffff00, #ffffff00),
+        linear-gradient(80deg, $white 0%, #ffffff00 70%);
     }
 
     p {
       font-size: 1.4rem;
       font-weight: 600;
       margin: 0;
+      background: $primaryColor;
+      border-radius: 30px;
+      padding: 2.5rem 1.3rem;
 
       @include phone {
+        padding: 1rem;
         font-size: 0.9rem;
         text-align: right;
       }

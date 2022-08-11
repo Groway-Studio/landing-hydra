@@ -12,4 +12,8 @@
     padding: 0 40px;
     overflow: hidden;
   }
+
+  @include desktop_hd {
+    @include base;
+  }
 }

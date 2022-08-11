@@ -1,13 +1,13 @@
 @import "../../styles/styles.scss";
 
 .features {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  height: 100vh;
-  display: grid;
   align-items: center;
+  display: grid;
+  height: 100%;
+  margin: 0 auto;
   position: relative;
+  width: 100%;
+  padding: 10rem 0 0;
 
   @include phone {
     height: 100%;
@@ -16,22 +16,26 @@
 
   @include tablet {
     margin: 16rem 0 5rem;
-    // padding-bottom: 10rem;
+    padding: 0;
+  }
+
+  @include desktop_hd {
+    max-height: 800px;
   }
 
   &::after {
     @include green_line_separator;
-    top: 98%;
+    top: 93%;
 
     @include tablet {
-      top: 105%;
+      top: 100%;
     }
   }
 
   &__content {
     gap: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc(33.3% - 1rem));
 
     @include phone {
       grid-template-columns: 100%;
