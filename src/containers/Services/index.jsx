@@ -20,9 +20,6 @@ const Services = () => {
           voluptatum consectetur facere ad nobis laborum ea tempore veniam
           reiciendis hic, odio laboriosam magnam nesciunt aspernatur eligendi
           officiis perspiciatis voluptas? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ut aut voluptatum consectetur facere ad nobis
-          laborum ea tempore veniam reiciendis hic, odio laboriosam magnam
-          nesciunt.
         </p>
       </ServiceCard>
       <ServiceCard
@@ -35,9 +32,7 @@ const Services = () => {
           voluptatum consectetur facere ad nobis laborum ea tempore veniam
           reiciendis hic, odio laboriosam magnam nesciunt aspernatur eligendi
           officiis perspiciatis voluptas? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ut aut voluptatum consectetur facere ad nobis
-          laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-          aut voluptatum consectetur facere ad.
+          adipisicing elit.
         </p>
       </ServiceCard>
     </section>

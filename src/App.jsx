@@ -13,8 +13,8 @@ import styles from "./App.module.scss";
 const App = () => {
   return (
     <>
+      <Navbar />
       <div className={styles.container}>
-        <Navbar />
         <Header />
         <Info />
         <Features />

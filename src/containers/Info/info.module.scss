@@ -8,8 +8,8 @@
   margin: 0 auto;
   position: relative;
   height: 100%;
+  padding-bottom: 10rem;
   width: 100%;
-  padding: 12rem 0 10rem 0;
 
   @include phone {
     grid-template-columns: 45% 55%;
@@ -26,12 +26,12 @@
   }
 
   @include desktop_hd {
-    max-height: 500px;
+    padding: 0 0 7rem 0;
   }
 
   &::after {
     @include green_line_separator;
-    top: 80%;
+    top: 70%;
     height: 220px;
 
     @include phone {

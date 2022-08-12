@@ -30,6 +30,10 @@
     @include tablet {
       top: 100%;
     }
+
+    @include phone {
+      top: 98%;
+    }
   }
 
   &__content {

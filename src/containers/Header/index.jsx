@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className={styles.header__content}>
         <h1 className={styles.header__title}>
-          Centraliza tus ventas con <span>HYDRA</span>
+          Centraliza tus <br /> ventas con <span>HYDRA</span>
         </h1>
         <p className={styles.header__description}>
           ¿Vendes por <span>WhatsApp</span> pero tu teléfono no te permite{" "}

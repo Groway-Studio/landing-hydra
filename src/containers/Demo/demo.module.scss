@@ -11,8 +11,9 @@
 
   @include phone {
     flex-direction: column;
-    margin-top: 18rem;
-    padding-bottom: 16rem;
+    padding-bottom: 10rem;
+    height: 100%;
+    max-height: 1000px;
   }
 
   @include tablet {
@@ -105,7 +106,7 @@
     &_image {
       display: block;
       margin: 0 20px 20px auto;
-      width: 60%;
+      width: 65%;
 
       @include phone {
         margin-top: 1.5rem;

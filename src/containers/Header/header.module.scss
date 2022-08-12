@@ -3,10 +3,12 @@
 .header {
   align-items: center;
   display: grid;
-  grid-template-columns: 55% 47%;
+  grid-template-columns: calc(100% - 400px) 400px;
   color: $white;
   position: relative;
-  padding: 2rem 7rem 4rem 11rem;
+  padding: 2rem 0 6rem 0;
+  margin: 0 auto;
+  max-width: 1024px;
 
   @include phone {
     padding: 0;
@@ -16,8 +18,8 @@
   }
 
   @include tablet {
-    grid-template-columns: 50% 50%;
-    padding: 0;
+    grid-template-columns: calc(100% - 315px) 315px;
+    padding: 2rem 0 0 0;
   }
 
   @include desktop_hd {
@@ -34,13 +36,13 @@
   }
 
   &__ellipse1 {
-    position: absolute;
-    width: 173.95px;
-    height: 173.95px;
     background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
+    bottom: 26.5%;
+    height: 173.95px;
+    left: -6%;
+    position: absolute;
     transform: rotate(-135deg);
-    bottom: 28%;
-    left: 7.5%;
+    width: 173.95px;
 
     @include phone {
       height: 110px;
@@ -63,17 +65,18 @@
 
   &__ellipse2 {
     align-items: flex-end;
+    background-position: 50% 120%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
     display: flex;
     height: 750px;
     justify-content: center;
     overflow: hidden;
-    right: 0;
-    width: 750px;
-    background: linear-gradient(216.29deg, #25d366 7.56%, #1979aa00 85.19%);
-    background-position: 50% 120%;
-    background-size: contain;
-    background-repeat: no-repeat;
+    right: -18%;
     top: 0;
+    width: 750px;
+    overflow: hidden;
 
     @include phone {
       height: 230px;
@@ -84,7 +87,8 @@
 
     @include tablet {
       height: 400px;
-      top: 10%;
+      top: 5%;
+      right: 0;
       width: 400px;
     }
 
@@ -98,7 +102,7 @@
     img {
       position: absolute;
       bottom: -25px;
-      width: 650px;
+      width: 620px;
 
       @include phone {
         width: 190px;
@@ -188,8 +192,8 @@
 
   &__arrow {
     position: absolute;
-    left: 13%;
-    top: 95%;
+    left: 14%;
+    top: 100%;
 
     @include phone {
       width: 10px;
@@ -225,7 +229,7 @@
 
   &__image {
     object-fit: contain;
-    width: 100%;
+    width: 500px;
     z-index: 100;
 
     @include phone {
@@ -238,7 +242,6 @@
     @include tablet {
       width: 315px;
       object-fit: contain;
-      margin: 0 30px 0 auto;
     }
   }
 }
