@@ -14,5 +14,9 @@ body {
   background: $primaryColor;
   color: $white;
   font-family: "Lato", sans-serif;
+}
+
+html,
+body {
   overflow-x: hidden;
 }

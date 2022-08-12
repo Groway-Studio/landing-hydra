@@ -8,6 +8,10 @@
   position: relative;
   gap: 4rem;
 
+  @include phone {
+    gap: 3rem;
+  }
+
   @include tablet {
     justify-content: center;
     height: 100%;
@@ -107,12 +111,12 @@
       backdrop-filter: blur(30px);
       flex-direction: column;
       height: 100%;
-      max-width: 75%;
+      max-width: 85%;
+      padding: 0;
     }
 
     @include tablet {
       height: 100%;
-      padding: 1rem;
     }
 
     h2 {
@@ -144,6 +148,7 @@
       @include phone {
         font-size: 0.85rem;
         padding-right: 1rem;
+        line-height: 20px;
       }
 
       @include tablet {
@@ -157,7 +162,7 @@
       padding: 2rem 2rem 2rem 0;
 
       @include phone {
-        padding: 1rem 0 0 1rem;
+        padding: 1rem 0 1rem 1rem;
         width: 100%;
       }
 
@@ -177,7 +182,6 @@
       @include phone {
         align-items: flex-end;
         flex-direction: column;
-        padding-left: 1rem;
         text-align: right;
       }
 
@@ -187,7 +191,7 @@
 
         @include phone {
           width: 100%;
-          padding: 1rem 1rem 1rem 0;
+          padding: 0 0 1rem 1rem;
         }
 
         @include tablet {
@@ -213,8 +217,8 @@
       object-fit: contain;
 
       @include phone {
-        margin: -50% 0 0 0;
-        width: 70%;
+        margin: -30% 0 0 0;
+        width: 60%;
       }
 
       @include tablet {
@@ -228,8 +232,8 @@
     text-align: right;
 
     @include phone {
-      padding-right: 1rem;
       text-align: left;
+      padding: 0;
     }
 
     h2 {
