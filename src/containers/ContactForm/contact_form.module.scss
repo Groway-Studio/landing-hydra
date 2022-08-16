@@ -8,15 +8,13 @@
   max-height: 800px;
 
   @include phone {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
+    padding-top: 3rem;
   }
 
   @include tablet {
     height: 100%;
-    margin-bottom: 10rem;
-  }
-
-  @include desktop_hd {
+    margin-bottom: 8rem;
   }
 
   &::after {
@@ -25,7 +23,7 @@
     height: 220px;
 
     @include phone {
-      top: 90%;
+      top: 85%;
     }
   }
 

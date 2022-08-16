@@ -26,6 +26,7 @@
   &::after {
     @include green_line_separator;
     top: 93%;
+    height: 180px;
 
     @include tablet {
       top: 100%;

@@ -9,18 +9,15 @@
 
   &::after {
     @include green_line_separator;
-    top: 72%;
+    top: 81%;
+    height: 180px;
 
     @include tablet {
       top: 70%;
     }
 
-    @include phone {
-      top: 70%;
-    }
-
     @include desktop_hd {
-      top: 72%;
+      top: 80%;
     }
   }
 
