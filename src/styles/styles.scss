@@ -54,16 +54,14 @@ $desktop_xl: 1920px;
 
 @mixin base {
   margin: auto;
-  width: $container_width;
+  width: 90%;
 
   @include tablet {
-    width: 90%;
   }
 
   @include phone {
     box-shadow: 0px 0px 0px 0px;
     height: auto;
-    width: 90%;
   }
 }
 
@@ -73,6 +71,7 @@ $desktop_xl: 1920px;
   flex-direction: column;
   justify-content: space-between;
   width: 45%;
+
   @include phone {
     width: 90%;
     height: auto;

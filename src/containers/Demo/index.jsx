@@ -20,7 +20,7 @@ const Demo = () => {
           className={styles.demo__description_image}
         />
         <p className={styles.demo__description_content}>
-          Y mejorá las experiencias de tus clientes con una de las mejores
+          Y mejora las experiencias de tus clientes con una de las mejores
           herramientas para ventas online basada en{" "}
           <span>Comercio Conversacional</span>
         </p>

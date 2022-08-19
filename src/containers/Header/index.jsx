@@ -15,7 +15,7 @@ const Header = () => {
           Centraliza tus <br /> ventas con <span>HYDRA</span>
         </h1>
         <p className={styles.header__description}>
-          ¿Vendes por <span>WhatsApp</span> pero tu teléfono no te permite{" "}
+          ¿Vendes por <span>WhatsApp</span>, pero tu teléfono no te permite{" "}
           <span>delegar tu trabajo?</span>
         </p>
         <button className={styles.header__button}>Esto es para vos</button>

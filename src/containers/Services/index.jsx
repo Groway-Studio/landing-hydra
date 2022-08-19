@@ -24,7 +24,7 @@ const Services = () => {
       </ServiceCard>
       <ServiceCard
         img={image2}
-        title="Un espacio de Negocios que trabajan con Nosotros a futuro"
+        title="Un espacio de negocios que trabajan con nosotros a futuro"
         className={styles.services__card}
       >
         <p>

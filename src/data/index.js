@@ -16,9 +16,9 @@ export const features = [
       <p>
         Esto no es poca cosa: <br />
         Los clientes valoran la posibilidad de comunicarse con las marcas si lo
-        necesitan. En la actualidad, el <span>66%</span> de los consumidores
+        necesitan. En la actualidad, el <strong>66%</strong> de los consumidores
         confía más en hacer una compra cuando una empresa utiliza activamente
-        las <span>aplicaciones de mensajería.</span>
+        las <strong>aplicaciones de mensajería.</strong>
       </p>
     ),
   },
@@ -44,7 +44,8 @@ export const features = [
         tiendas físicas mezclando y combinando las experiencias ofrecidas. ¿La
         tienda está cerrada? ¿No tienen tiempo para esperar en una fila? No hay
         problema, ellos aún pueden obtener la{" "}
-        <span>experiencia personalizada</span> de ser atendidos en la tienda.
+        <strong>experiencia personalizada</strong> de ser atendidos en la
+        tienda.
       </p>
     ),
   },
